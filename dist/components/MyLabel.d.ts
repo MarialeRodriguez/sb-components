@@ -1,5 +1,4 @@
 import './mylabel.css';
-
 export interface MyLabelProps {
     /**
    * Este mensaje es el que se va a usar en la etiqueta
@@ -8,7 +7,7 @@ export interface MyLabelProps {
     /**
    * Este es el tamaño por defecto del label
    */
-    size: 'normal'|'h1'|'h2'|'h3';
+    size: 'normal' | 'h1' | 'h2' | 'h3';
     /**
      * Capitalizar toda la palabra
      */
@@ -24,23 +23,6 @@ export interface MyLabelProps {
     /**
      * Color de fondo
      */
-    backgroundColor? :string ;
+    backgroundColor?: string;
 }
-
-export const MyLabel = ({
-    label = 'No label',
-    size = 'normal',
-    color = 'primary',
-    allCaps = false,
-    fontColor,
-    backgroundColor = 'transparent'
-}: MyLabelProps ) => {
-  return (
-    <span 
-    className={` label ${ size } text-${ color }`}
-    style={{ color: fontColor, backgroundColor }}>
-    { allCaps ? label.toUpperCase() : label }
-    </span>
-  )
-}
-
+export declare const MyLabel: ({ label, size, color, allCaps, fontColor, backgroundColor }: MyLabelProps) => import("react/jsx-runtime").JSX.Element;
